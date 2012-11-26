@@ -1,0 +1,24 @@
+{
+    "name" : "situation", 
+    "version" : "0.0.1",
+    "description" :"Conveniently write status updates to a stream.",
+    "homepage" : [
+       ""
+    ],
+    "repository" : {
+        "type" : "git", 
+        "url" : ""
+    },
+    "keywords" : ["status", "update", "situation", "monitor", "jersey shore", "jersey"],
+    "author" : "JP Richardson <jprichardson@gmail.com>",
+    "licenses" : [ {
+        "type" : "MIT",
+        "url" : ""
+    }],
+    "dependencies" : {},
+     "devDependencies":{},
+    "main" : "./lib/situation.js",
+    "scripts": {
+        "test": "mocha test"
+    }
+}
