@@ -19,11 +19,9 @@ describe('situation', function() {
         }
       }
 
-      var something = situation(fauxStream)
-      something.add('monitor')
-      something.add('GLOBAL')
-      something.add('obj.cats')
-      something.watch = eval(something.watchString)
+      var s1 = situation(fauxStream).watch('monitor').watch('GLOBAL').watch('obj.cats')
+      s1.outputJSON = true
+      s1.eval = eval(s1.watchString)
 
       setInterval(function() {
         monitor += 3
@@ -31,7 +29,7 @@ describe('situation', function() {
       }, 10)
 
       setTimeout(function() {
-        something.update()
+        s1.update()
       }, 100)
     })
   })
