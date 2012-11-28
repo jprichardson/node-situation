@@ -35,6 +35,7 @@ var s1 = situation()
 s1.eval = eval(s1.evalString)
 s1.start('2 seconds')
 
+//simulate change in variables
 setInterval(function() {
   obj.cats += Math.floor((Math.random() * 5))
   connections += 1
