@@ -20,8 +20,8 @@ describe('situation', function() {
       }
 
       var s1 = situation(fauxStream).watch('monitor').watch('GLOBAL').watch('obj.cats')
-      s1.outputJSON = true
-      s1.eval = eval(s1.watchString)
+      s1.shouldOutputJSON = true
+      s1.eval = eval(s1.evalString)
 
       setInterval(function() {
         monitor += 3
