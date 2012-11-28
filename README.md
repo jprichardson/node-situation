@@ -135,6 +135,12 @@ passed the internal `startTime` will just be set, but no interval will run. You 
 `update()` manually.
 
 
+### stop()
+
+If the internal update interval is running, this will stop it. This is equivalent to calling `clearInterval`, i.e. it'll remove 
+it from the Node.js event run loop.
+
+
 ### update()
 
 Force a manual write to the stream of the current variable situation.
