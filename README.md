@@ -27,11 +27,12 @@ Let's assume that you want to display the status of some variables every 2 secon
 var situation = require('situation')
 
 var obj = {cats: 1}
-  , connections = 0
+  , dogs = 0
 
 var s1 = situation()
-  .watch('obj.cats', 'Cats')
-  .watch('connections')
+  .watch('Cats', 'obj.cats')
+  .watch('dogs')
+  .watch('Animals', function(){ return obj.cats + dogs})
 s1.eval = eval(s1.evalString)
 s1.start('2 seconds')
 
@@ -49,9 +50,11 @@ the output is then displayed every on an interval:
 *  Start Time: 2012-11-28T00:01:59.082Z *
 *    Run Time: 0:0:15                   *
 *        Cats: 125                      *
-* connections: 63                       *
+*        dogs: 63                       *
+*     Animals: 188                      *
 *****************************************
 ```
+
 
 Members
 -------
@@ -70,10 +73,9 @@ assert(s1.outStream, process.stdout) //true
 ```
 
 
-### watch(variable, [display])
+### watch([display], variableOrFunc)
 
-Adds a variable to report the situation on. Must pass in as a string. The second parameter is used to change
-the display output.
+Adds a variable to report the situation on. Must pass in as a string or a function. See the example.
 
 Returns the `situation` object so that they can be chained.
 
