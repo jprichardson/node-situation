@@ -1,3 +1,7 @@
+0.2.0 / 2015-01-23
+------------------
+- added method `getUpdateString()`
+
 0.1.0 / 2012-12-10
 ------------------
 * Added ability to get updates from functions.
