@@ -14,7 +14,7 @@ Constantly crafting status blocks in JavaScript intervals was a pain.
 Installation
 ------------
 
-    npm install situation
+    npm install --save situation
 
 
 
@@ -27,7 +27,7 @@ Let's assume that you want to display the status of some variables every 2 secon
 var situation = require('situation')
 
 var obj = {cats: 1}
-  , dogs = 0
+var dogs = 0
 
 var s1 = situation()
   .watch('Cats', 'obj.cats')
