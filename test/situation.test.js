@@ -1,5 +1,5 @@
-var testutil = require('testutil')
-  , situation = require('../lib/situation')
+var terst = require('terst')
+var situation = require('../lib/situation')
 
 var GLOBAL = -5
 
