@@ -13,9 +13,9 @@ describe('situation', function() {
         var fauxStream = {
           write: function(data) {
             var data = JSON.parse(data)
-            T (data.monitor === 27)
+            T (data.monitor === 12)
             T (data.GLOBAL === -5)
-            T (data['obj.cats'] === 13)
+            T (data['obj.cats'] === 8)
             done()
           }
         }
@@ -27,11 +27,11 @@ describe('situation', function() {
         setInterval(function() {
           monitor += 3
           obj.cats += 1
-        }, 10)
+        }, 200)
 
         setTimeout(function() {
           s1.update()
-        }, 100)
+        }, 850)
       })
     })
 
@@ -42,8 +42,8 @@ describe('situation', function() {
 
         var fauxStream = {
           write: function(data) {
-            T (data.indexOf('Monitor: 27') > 0)
-            T (data.indexOf('Cats: 13') > 0)
+            T (data.indexOf('Monitor: 12') > 0)
+            T (data.indexOf('Cats: 8') > 0)
             done()
           }
         }
@@ -54,11 +54,11 @@ describe('situation', function() {
         setInterval(function() {
           monitor += 3
           obj.cats += 1
-        }, 10)
+        }, 200)
 
         setTimeout(function() {
           s1.update()
-        }, 100)
+        }, 850)
       })
     })
 
@@ -69,9 +69,9 @@ describe('situation', function() {
 
         var fauxStream = {
           write: function(data) {
-            T (data.indexOf('dogs: 27') > 0)
-            T (data.indexOf('Cats: 13') > 0)
-            T (data.indexOf('Animals: 40') > 0)
+            T (data.indexOf('dogs: 12') > 0)
+            T (data.indexOf('Cats: 8') > 0)
+            T (data.indexOf('Animals: 20') > 0)
             done()
           }
         }
@@ -82,11 +82,11 @@ describe('situation', function() {
         setInterval(function() {
           dogs += 3
           obj.cats += 1
-        }, 10)
+        }, 200)
 
         setTimeout(function() {
           s1.update()
-        }, 100)
+        }, 850)
       })
     })
   })
