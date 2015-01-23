@@ -1,6 +1,6 @@
 {
   "name": "situation",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Conveniently write status updates to a stream.",
   "repository": {
     "type": "git",

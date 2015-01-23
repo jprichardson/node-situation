@@ -1,3 +1,7 @@
+0.2.1 / 2015-01-23
+------------------
+- typo syntax error
+
 0.2.0 / 2015-01-23
 ------------------
 - added method `getUpdateString()`
